@@ -28,5 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Create cli
-`ng new {projectName}` create new  ng project
+`ng new {projectName}` create new  ng project  
 `ng generate {componentName}` or `ng g c {componentName}`  create component  
