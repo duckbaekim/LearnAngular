@@ -12,15 +12,10 @@ export class ButtonsComponent implements OnInit {
   @Output() clickEvent = new EventEmitter<string>(); 
 
   constructor() { }
-  start(){ 
-    this.clickEvent.emit('change'); //부모 객체가 이벤트를 기다리다 해당 버튼 선택시 데이터를 받을 수 있다.
+  executeButton(command:string){ 
+    this.clickEvent.emit(command); //부모 객체가 이벤트를 기다리다 해당 버튼 선택시 데이터를 받을 수 있다.
   }
-  stop($event:MouseEvent){ 
-    this.count++
-  }
-  reset($event:MouseEvent){ 
-    this.count++
-  }
+  
   ngOnInit(): void {
   }
 

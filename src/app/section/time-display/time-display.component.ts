@@ -9,22 +9,44 @@ export class TimeDisplayComponent implements OnInit {
 
   @Input() inputData:string;
 
-  test = 1;
+  min:number = 0;
+  sec: number = 0;
+  ms: number = 0;
+  timeInterval:any;
   constructor() { 
-    setInterval(()=>{
-      this.test++;
-    },1000)
     this.inputData = '';
     
   }
+  timeStart(){
+    this.timeInterval = setInterval(()=>{
+      this.ms++;
+    },10)
+  }
 
+  timeStop(){
+    clearInterval(this.timeInterval);
+  }
+
+  timeReset(){
+    this.timeStop();
+    this.ms = 0;
+  }
+  
   ngOnInit(): void {
   }
 
+
   ngOnChanges(changes:SimpleChanges){
-    console.log(changes)
     for(let propName in changes){
-      
+      if(propName=="inputData" && changes[propName].currentValue =="start"){
+        this.timeStart();
+      }
+      if(propName=="inputData" && changes[propName].currentValue =="stop"){
+        this.timeStop();
+      }      
+      if(propName=="inputData" && changes[propName].currentValue =="reset"){
+        this.timeReset();
+      }      
     }
   }
   
