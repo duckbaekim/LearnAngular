@@ -30,3 +30,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Create cli
 `ng new {projectName}` create new  ng project  
 `ng generate {componentName}` or `ng g c {componentName}`  create component  
+
+##JS Info
+코드의 복잡화, 전역 변수(즉시 실행함수, 커먼js) 등 해결위해   
+모듈 패턴 커먼js amd이 나오고 추후 js도 필요성에 따라 스팩을 지원 import 지원하게 됨  
+webpack - 모듈 빌드 툴 모듈이 복잡함에따라 나옴
