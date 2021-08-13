@@ -1,19 +1,4 @@
-<div class="title">
-    여기는 섹션입니다.
-    <div class="display">
-        <app-time-display [inputData]="present"></app-time-display>
-        <app-buttons (clickEvent)="startTime($event)"></app-buttons> 
-        <!-- $event 는 클릭이벤트에서 넘어온 이벤트값이다 -->
-    </div>
-    
-</div>
+<router-outlet></router-outlet> 
+<!-- <app-stopwatch></app-stopwatch> -->
 
-<!-- 정리
-하위 -> 상위 
-하위 @Output으로 이벤트리스너 생성후 emit 발생 
-상위에선 해당 이벤트 리스너로 접근시 상위 컴포넌트의 함수 실행
-(하위 이벤트리스너) = "상위 펑션()"
-
-상위 -> 하위 
-상위 ts에서 변수 지정 
-하위에서 그 변수 input 받을 데이터 지정 [하위]="상위 변수" -->
+<!-- 라우터 아울렛은 패스값이 맞는 컴포넌트를 표현한다.  -->

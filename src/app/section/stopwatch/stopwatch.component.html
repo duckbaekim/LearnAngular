@@ -1,0 +1,23 @@
+<div class="title">
+    여기는 섹션입니다.
+    <div class="display">
+        <app-time-display [inputData]="present" (clickEvent)="startTime($event)"></app-time-display>
+        <!-- <app-buttons (clickEvent)="startTime($event)"></app-buttons>  -->
+        <!-- $event 는 클릭이벤트에서 넘어온 이벤트값이다 -->
+    </div>
+    
+</div>
+
+<!-- 라우터 2가지 a의 라우터 링크 사용-->
+<!-- 2번째 스크립트 사용 라우터 서비스 이용한 스크립트 사용 -->
+<a [routerLink]="'/clock'">시계로 이동</a>
+
+<!-- 정리
+하위 -> 상위 
+하위 @Output으로 이벤트리스너 생성후 emit 발생 
+상위에선 해당 이벤트 리스너로 접근시 상위 컴포넌트의 함수 실행
+(하위 이벤트리스너) = "상위 펑션()"
+
+상위 -> 하위 
+상위 ts에서 변수 지정 
+하위에서 그 변수 input 받을 데이터 지정 [하위]="상위 변수" -->
